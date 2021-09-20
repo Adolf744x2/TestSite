@@ -1,0 +1,30 @@
+
+
+.selector-for-some-widget { 
+  box-sizing: content-box;
+}
+.zag{text-align: center;}
+
+
+
+ .card1{ float: left;
+  display: block;
+  width: 300px;
+  border: 1px solid blue;
+  margin: 2px;
+ }
+
+.card { float: left;
+  display: block;
+  width: 300px;
+  border: 1px solid blue;
+  margin: 2px;
+}
+
+.card { float: left;
+  display: block;
+  width: 300px;
+  border: 1px solid blue;
+  margin: 2px;
+  
+} 
