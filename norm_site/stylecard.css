@@ -1,26 +1,2 @@
 
 
-.bodybody{
-    box-sizing: content-box;
-}
-
-.biografi{ display: block;
-    position: static;
-    float: center;
-}
-
-.cardone{
-    float: left;
-  display: block;
-  width: 200px;
-  border: 1px solid blue;
-  margin: 2px;
-}
-
-.textinfo{ float: left;
-    display: block;
-    width: 200px;
-    border: 1px solid blue;
-    margin: 2px;
-
-}
