@@ -4,40 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>Hello, world!</title>
+    <title>Калькулятор</title>
 </head>
 <body>
 <?php
-function calc(){
-    if(isset($_POST['btnCalc'])){
-        $message = "нечего считать(((";
-        if (isset($_POST['a']) && !empty($_POST['a']))
-        {
-            $a = $_POST['a'];
-        };
-        if (isset($_POST['b']) && !empty($_POST['b']))
-        {
-            $b = $_POST['b'];
-        };
-        if (isset($_POST['action']) && !empty($_POST['action']))
-        {
-            $action = $_POST['action'];
-        };
-        switch ($action){
-            case '-': $message = "$a - $b= ";$message .= $a-$b; break;
-            case '+': $message = "$a + $b= ";$message .=  $a+$b;break;
-            case '/': $message = "$a / $b= ";$message .=  $a/$b;break;
-            case '*': $message = "$a * $b= ";$message .=  $a*$b;break;
-            default: $message = "WTF? ";
-        }
-    }
-    return $message;
-}
+require_once ("includes/function.php");
+
 ?>
 
 <div class="container">
 
 <h1>Калькулятор v0.01</h1>
+
 
 <div class="row">
     <div class="col-6">
@@ -58,7 +36,7 @@ function calc(){
                     <option value="/">/</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary" name="btnCalc">Посчитать</button>
+            <button type="submit" class="btn btn-dark" name="btnCalc">Посчитать</button>
         </form>
     </div>
     <div class="col-6">
@@ -66,6 +44,7 @@ function calc(){
             <div class="card-body">
                 Результат)<br>
                 <?php echo calc();
+                echo getFileList();
 
                 ?>
 
